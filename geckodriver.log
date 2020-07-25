@@ -1,0 +1,90 @@
+1595630184131	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilew9QgX6"
+1595630186797	Marionette	INFO	Listening on port 43327
+1595630186855	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630206514	Marionette	INFO	Stopped listening on port 43327
+1595630224482	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiWoPUl"
+1595630227149	Marionette	INFO	Listening on port 42129
+1595630227224	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630306133	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyi1DdJ"
+1595630308633	Marionette	INFO	Listening on port 33885
+1595630308670	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630312596	Marionette	INFO	Stopped listening on port 42129
+1595630336085	Marionette	INFO	Stopped listening on port 33885
+1595630375420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0gs1jB"
+1595630377892	Marionette	INFO	Listening on port 34901
+1595630377938	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630387087	Marionette	INFO	Stopped listening on port 34901
+1595630406697	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9i85xf"
+1595630409040	Marionette	INFO	Listening on port 42303
+1595630409118	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+1595630718608	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDbilO2"
+1595630721021	Marionette	INFO	Listening on port 37709
+1595630721026	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630732501	Marionette	INFO	Stopped listening on port 37709
+1595630736360	Marionette	INFO	Stopped listening on port 42303
+1595630811066	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesAmSFQ"
+1595630813620	Marionette	INFO	Listening on port 41205
+1595630813689	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1595630865532	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5Ckcki"
+1595630868016	Marionette	INFO	Listening on port 43577
+1595630868080	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595630891929	Marionette	INFO	Stopped listening on port 43577
+1595630911251	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3GJHZK"
+1595630913702	Marionette	INFO	Listening on port 34765
+1595630913778	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1595630987684	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileaHUyQi"
+1595630990443	Marionette	INFO	Listening on port 39179
+1595630990536	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595631001855	Marionette	INFO	Stopped listening on port 39179
+1595631004342	Marionette	INFO	Stopped listening on port 41205
+1595631011131	Marionette	INFO	Stopped listening on port 34765
+1595631144164	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTdDluc"
+1595631146593	Marionette	INFO	Listening on port 38279
+1595631146603	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595631153528	Marionette	INFO	Stopped listening on port 38279
+1595631434923	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6vSAhY"
+1595631437081	Marionette	INFO	Listening on port 40747
+1595631437136	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.error: services.settings: 
+  main/cfr-fxa Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/messaging-experiments Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1595631452478	Marionette	INFO	Stopped listening on port 40747
+1595638778955	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKcqKOv"
+1595638781527	Marionette	INFO	Listening on port 32985
+1595638781596	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595638781650	Marionette	INFO	Stopped listening on port 32985
+1595638841502	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileB0kD4H"
+1595638844019	Marionette	INFO	Listening on port 41997
+1595638844032	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595638844103	Marionette	INFO	Stopped listening on port 41997
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xB000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1595638928293	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqr4Y9x"
+1595638930888	Marionette	INFO	Listening on port 33365
+1595638930940	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595638930990	Marionette	INFO	Stopped listening on port 33365
+1595639043306	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileK2LbTN"
+1595639045681	Marionette	INFO	Listening on port 35485
+1595639045748	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595639045801	Marionette	INFO	Stopped listening on port 35485
+1595639254741	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMrqLKl"
+1595639257146	Marionette	INFO	Listening on port 33585
+1595639257171	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595639257225	Marionette	INFO	Stopped listening on port 33585
