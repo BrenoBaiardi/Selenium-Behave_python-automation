@@ -1,6 +1,7 @@
 from behave import given, then, when
 from src.Pages.Pages import LoginPage
 from unittest import TestCase
+from hamcrest import assert_that, equal_to
 
 
 class testLogin(TestCase):
@@ -35,12 +36,7 @@ class testLogin(TestCase):
     def step_impl(context):
         context.login_page.submitLogin()
 
-    @then(u'the correct error message should be displayed')
-    def step_impl(context):
-        alerts = context.login_page.locateErrors(context.browser)
-
-        for i in range(len(alerts)):
-            if alerts[i] == "An email address required.":
-                assert (alerts[i] == "An email address required.")
-                break
-        assert (alerts[i] == "An email address required.")
+    @then(u'the correct error message {text} should be displayed')
+    def step_impl(context, text):
+        alert = context.login_page.locateErrors(context.browser)
+        assert_that(text, equal_to(alert))

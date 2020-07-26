@@ -38,11 +38,12 @@ class LoginPage(StorePage):
     def locateErrors(self, browser):
         self.alert = browser.find_elements_by_tag_name(
             "li")
-        for i in self.alert:
-            print(i.text)
-            if i.text == "An email address required.":
-                print("pimba")
-        return self.alert
+        # self.alert = PageElement(class_name="alert")
+        # for i in self.alert:
+        #    print(i.text)
+        #    if i.text == "An email address required.":
+        #        print("pimba")
+        return self.alert[14].text  # the only way i could find to do this
 
 
 class HomePage(StorePage):
@@ -65,12 +66,12 @@ class ProductPage(StorePage):
         self.btn_add_to_cart.click()
 
 
+'''
 browser = webdriver.Firefox()
 login_page = LoginPage(
     browser, "http://automationpractice.com/index.php?controller=authentication&back=my-account")
 login_page.get('')
 
-'''
 home_page = HomePage(
     browser, "http://automationpractice.com/index.php")
 home_page.get('')

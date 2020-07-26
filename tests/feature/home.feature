@@ -1,5 +1,10 @@
 Feature: HomePage 
 
+Scenario: Enter login page
+    Given I am currently at home page
+    When I click the sign in button
+    Then I will be in the login page
+
 Scenario: Add product into empty cart
     Given I am currently at home page
     And the cart is empty 

@@ -1,43 +1,53 @@
 from behave import given, then, when
 from src.Pages.Pages import ProductPage
+from hamcrest import assert_that, equal_to, not_
 
 
 @given(u'I am currently at home page')
 def step_impl(context):
     context.home_page.get('')
+    assert_that(context.browser.title, equal_to("My Store"))
 
 
-@given(u'the cart is empty')
+@ when(u'I click the sign in button')
 def step_impl(context):
-    assert context.home_page.span_empty_cart.text == "(empty)"
+    context.home_page.goToLogin()
 
 
-@when(u'I click add to cart button in a product')
+@ given(u'the cart is empty')
+def step_impl(context):
+    assert_that(context.home_page.span_empty_cart.text, equal_to("(empty)"))
+
+
+@ when(u'I click add to cart button in a product')
 def step_impl(context):
     raise NotImplementedError(
         u'STEP: Then the cart need to recieve the product')
 
 
-@then(u'the cart need to have only one product')
+@ then(u'the cart need to have only one product')
 def step_impl(context):
     context.home_page.get('')
     print(context.home_page.checkCartQuantity())
 
 
-@given(u'I add something to the cart')
+@ given(u'I add something to the cart')
 def step_impl(context):
+    context.home_page.get("")
     product = context.home_page.products[0]
     product.click()
     prod_page = ProductPage(context.browser, context.browser.current_url)
     prod_page.add_to_cart(1, "L")
 
 
-@given(u'the cart is not empty')
+@ given(u'the cart is not empty')
 def step_impl(context):
-    assert context.home_page.span_empty_cart.text != "(empty)"
+    #assert context.home_page.span_empty_cart.text != "(empty)"
+    assert_that(context.home_page.span_empty_cart.text,
+                equal_to("(empty)"))
 
 
-@then(u'the cart need to recieve the product')
+@ then(u'the cart need to recieve the product')
 def step_impl(context):
     raise NotImplementedError(
         u'STEP: Then the cart need to recieve the product')
