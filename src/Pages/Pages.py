@@ -4,24 +4,53 @@ from selenium import webdriver
 
 
 class StorePage(PageObject):
-    empty_cart_span = PageElement(class_name="ajax_cart_no_product")
+    span_empty_cart = PageElement(class_name="ajax_cart_no_product")
+    btn_sign_in = PageElement(css="a.login")
+    btn_logout = PageElement(css=".logout")
+
+    def checkCartQuantity(self):
+        return PageElement(class_name="ajax_cart_quantity unvisible")
+
+    def goToLoginPage(self):
+        self.btn_sign_in.click()
+
+    def logout(self):
+
+        self.btn_logout.click()
 
 
-class LoginPage(PageObject):
+class LoginPage(StorePage):
     input_email = PageElement(id_="email")
     input_passwd = PageElement(id_="passwd")
     btn_submit_login = PageElement(id_="SubmitLogin")
-    empty_cart_span = PageElement(class_name="ajax_cart_no_product")
+    span_empty_cart = PageElement(class_name="ajax_cart_no_product")
+    alert = None
 
-    def login(self):
-        self.input_email.send_keys("email")
-        self.input_passwd.send_keys("pw")
+    def fillPassword(self, password):
+        self.input_passwd.send_keys(password)
+
+    def fillEmail(self, email):
+        self.input_email.send_keys(email)
+
+    def submitLogin(self):
         self.btn_submit_login.click()
 
+    def locateErrors(self, browser):
+        self.alert = browser.find_elements_by_tag_name(
+            "li")
+        for i in self.alert:
+            print(i.text)
+            if i.text == "An email address required.":
+                print("pimba")
+        return self.alert
 
-class HomePage(PageObject):
+
+class HomePage(StorePage):
     products = MultiPageElement(class_name="product-container")
-    empty_cart_span = PageElement(class_name="ajax_cart_no_product")
+    btn_sign_in = PageElement(css="a.login")
+
+    def goToLogin(self):
+        self.btn_sign_in.click()
 
 
 class ProductPage(StorePage):
@@ -37,13 +66,11 @@ class ProductPage(StorePage):
 
 
 browser = webdriver.Firefox()
-'''
 login_page = LoginPage(
     browser, "http://automationpractice.com/index.php?controller=authentication&back=my-account")
 login_page.get('')
-login_page.login()
-'''
 
+'''
 home_page = HomePage(
     browser, "http://automationpractice.com/index.php")
 home_page.get('')
@@ -54,3 +81,4 @@ prod_page = ProductPage(
     browser, browser.current_url)
 
 prod_page.add_to_cart(23, "L")
+'''
