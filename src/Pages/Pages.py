@@ -1,15 +1,19 @@
 
 from page_objects import PageElement, PageObject, MultiPageElement
 from selenium import webdriver
+import time
 
 
 class StorePage(PageObject):
     span_empty_cart = PageElement(class_name="ajax_cart_no_product")
     btn_sign_in = PageElement(css="a.login")
     btn_logout = PageElement(css=".logout")
+    cart_quantity = '0'
 
-    def checkCartQuantity(self):
-        return PageElement(class_name="ajax_cart_quantity unvisible")
+    def checkCartQuantity(self, browser):
+        self.cart_quantity = browser.find_element_by_css_selector(
+            "span.ajax_cart_quantity:nth-child(2)").text
+        return self.cart_quantity
 
     def goToLoginPage(self):
         self.btn_sign_in.click()
@@ -64,14 +68,17 @@ class ProductPage(StorePage):
         self.input_quantity.send_keys(quantity)
         self.option_size.send_keys(size)
         self.btn_add_to_cart.click()
+        time.sleep(3)
 
+
+"""
+browser = webdriver.Firefox()
 
 '''
-browser = webdriver.Firefox()
 login_page = LoginPage(
     browser, "http://automationpractice.com/index.php?controller=authentication&back=my-account")
 login_page.get('')
-
+'''
 home_page = HomePage(
     browser, "http://automationpractice.com/index.php")
 home_page.get('')
@@ -82,4 +89,4 @@ prod_page = ProductPage(
     browser, browser.current_url)
 
 prod_page.add_to_cart(23, "L")
-'''
+"""

@@ -16,7 +16,8 @@ def step_impl(context):
 
 @ given(u'the cart is empty')
 def step_impl(context):
-    assert_that(context.home_page.span_empty_cart.text, equal_to("(empty)"))
+    assert_that(context.home_page.checkCartQuantity(context.browser),
+                equal_to(""))
 
 
 @ when(u'I click add to cart button in a product')
@@ -28,7 +29,7 @@ def step_impl(context):
 @ then(u'the cart need to have only one product')
 def step_impl(context):
     context.home_page.get('')
-    print(context.home_page.checkCartQuantity())
+    print(context.home_page.checkCartQuantity(context.browser))
 
 
 @ given(u'I add something to the cart')
@@ -43,11 +44,11 @@ def step_impl(context):
 @ given(u'the cart is not empty')
 def step_impl(context):
     #assert context.home_page.span_empty_cart.text != "(empty)"
-    assert_that(context.home_page.span_empty_cart.text,
-                equal_to("(empty)"))
+    assert_that(context.home_page.checkCartQuantity(context.browser),
+                not_(""))
 
 
 @ then(u'the cart need to recieve the product')
 def step_impl(context):
-    raise NotImplementedError(
-        u'STEP: Then the cart need to recieve the product')
+    assert_that(context.home_page.checkCartQuantity(context.browser),
+                equal_to("3"))
