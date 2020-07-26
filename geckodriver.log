@@ -1161,3 +1161,11 @@ JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILUR
 1595791920908	Marionette	INFO	Listening on port 36927
 1595791920986	Marionette	WARN	TLS certificate errors will be ignored for this session
 1595791963101	Marionette	INFO	Stopped listening on port 36927
+1595792393768	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileH9EDRu"
+1595792396405	Marionette	INFO	Listening on port 42217
+1595792396494	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595792443077	Marionette	INFO	Stopped listening on port 42217
+1595793418589	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6KD0LO"
+1595793420797	Marionette	INFO	Listening on port 41711
+1595793420812	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595793464122	Marionette	INFO	Stopped listening on port 41711
