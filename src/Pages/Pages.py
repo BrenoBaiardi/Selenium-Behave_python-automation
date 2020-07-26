@@ -69,24 +69,3 @@ class ProductPage(StorePage):
         self.option_size.send_keys(size)
         self.btn_add_to_cart.click()
         time.sleep(3)
-
-
-"""
-browser = webdriver.Firefox()
-
-'''
-login_page = LoginPage(
-    browser, "http://automationpractice.com/index.php?controller=authentication&back=my-account")
-login_page.get('')
-'''
-home_page = HomePage(
-    browser, "http://automationpractice.com/index.php")
-home_page.get('')
-produto = home_page.products[0]
-produto.click()
-
-prod_page = ProductPage(
-    browser, browser.current_url)
-
-prod_page.add_to_cart(23, "L")
-"""
